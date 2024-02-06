@@ -24,4 +24,14 @@ def getPinUrls(boardId):
 for boardId in boardIds:
     getPinUrls(boardId)
 
+# write to file
+with open("pinUrls.csv", "w") as file:
+    # write headers
+    file.write("Pin URLs\n")
+    for url in pinUrls:
+        file.write(url + "\n")
+print("File saved successfully")
+
+
+
 print(pinUrls)
